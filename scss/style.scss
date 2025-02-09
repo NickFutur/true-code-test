@@ -1,0 +1,299 @@
+$magnoly: #f8f6ff;
+$dark-purple: #352958;
+$white: #fff;
+$black: #000;
+$ghostly-white-ef: #eff0ff;
+$ghostly-white-fd: #fdfdff;
+$light-black: #3d3d3d;
+$light-blue: #b1a8cb;
+$ghostly-white-f8: #f8f8fb;
+$grey: #b8b7bb;
+$ghostly-white-f2: #f2f2fe;
+$first-family: "Panton SemiBold", sans-serif;
+$second-family: "Panton", sans-serif;
+$third-family: "Panton Light", sans-serif;
+
+:root {
+  font-size: 10px;
+}
+
+/* body styles */
+.main-page {
+  width: 100%;
+  padding-top: 25px;
+}
+
+.main-page_background_color {
+  background-color: $ghostly-white-f2;
+}
+
+/* header styles */
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-block_container-width_lg {
+  max-width: 1225px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 56px;
+}
+
+.phone {
+  font-family: $first-family;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: $dark-purple;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+/* menu styles*/
+.navigation {
+  .navigation__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    .navigation__item {
+      position: relative;
+      &::after {
+        content: " ";
+        height: 1px;
+        width: 0;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        background: $dark-purple;
+        transition: all 0.3s ease;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        &::after {
+          transition: all 0.3s ease;
+          width: 100%;
+        }
+      }
+      a {
+        color: $dark-purple;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-family: $first-family;
+      }
+    }
+  }
+}
+
+.btn-form {
+  font-family: $first-family;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+  color: $dark-purple;
+  text-decoration: none;
+  border: 2px solid $dark-purple;
+  border-radius: 10px;
+  opacity: 0.88;
+  padding: 13px 37px;
+  background-color: $magnoly;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active {
+    color: $magnoly;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background-color: $dark-purple;
+  }
+
+  &:active {
+    background-color: $light-blue;
+  }
+
+  &:disabled {
+    border: 2px solid $light-blue;
+    cursor: not-allowed;
+    color: $light-blue;
+    background-color: $ghostly-white-f8;
+  }
+}
+
+/* banner styles*/
+.banner-block {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  .banner-block__info {
+    display: flex;
+    gap: 100px;
+
+    .banner-block__info-text {
+      padding-top: 37px;
+      .banner-block__title {
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 4.8rem;
+        letter-spacing: 0.03em;
+        color: $black;
+        width: 530px;
+      }
+
+      .banner-block__description {
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.03em;
+        color: $dark-purple;
+        margin-top: 40px;
+        width: 499px;
+      }
+    }
+  }
+
+  .banner-block__model {
+  }
+
+  .banner-block__background-img {
+    position: absolute;
+    top: 0;
+    right: -105px;
+  }
+}
+.banner-block_indent_lg {
+  margin-top: 80px;
+}
+
+/* traineeship slider block */
+.traineeship-slider {
+  .traineeship-slider__wrapper {
+    .traineeship-slider__slide {
+      width: 335px;
+      height: 392px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid #352958;
+      border-radius: 30px;
+      padding: 23px 23px 25px 23px;
+
+      .traineeship-slider__image {
+        width: 339px;
+        height: 267px;
+        border-radius: 30px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        img {
+        }
+      }
+      .traineeship-slider__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        .traineeship-slider__title {
+          font-family: $second-family;
+          font-weight: 700;
+          font-size: 2.4rem;
+          letter-spacing: 0.03em;
+          text-align: center;
+          color: $black;
+          margin-bottom: 30px;
+        }
+
+        .traineeship-slider__buttons {
+          display: flex;
+          gap: 23px;
+          justify-content: center;
+          .traineeship-slider__link {
+            padding: 15px 32px;
+          }
+          .traineeship-slider__btn {
+            color: $magnoly;
+            opacity: 1;
+            padding: 15px 32px;
+            background-color: $dark-purple;
+
+            &:hover,
+            &:active {
+              color: $dark-purple;
+              transition: all 0.3s ease;
+            }
+
+            &:hover {
+              background-color: $magnoly;
+            }
+
+            &:active {
+              background-color: $light-blue;
+              color: $magnoly;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .traineeship-slider__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+    .traineeship-slider__btn-prev,
+    .traineeship-slider__btn-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $dark-purple;
+      border-radius: 10px;
+      width: 41px;
+      height: 41px;
+      cursor: pointer;
+
+      path {
+        fill: $dark-purple;
+      }
+
+      &:hover,
+      &:active {
+        path {
+          fill: $magnoly;
+        }
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        background-color: $dark-purple;
+      }
+
+      &:active {
+        background-color: $light-blue;
+        path {
+          fill: $magnoly;
+        }
+      }
+    }
+  }
+}
