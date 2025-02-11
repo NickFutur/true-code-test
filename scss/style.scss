@@ -9,9 +9,9 @@ $light-blue: #b1a8cb;
 $ghostly-white-f8: #f8f8fb;
 $grey: #b8b7bb;
 $ghostly-white-f2: #f2f2fe;
-$first-family: "Panton SemiBold", sans-serif;
-$second-family: "Panton", sans-serif;
-$third-family: "Panton Light", sans-serif;
+$panton-SemiBold: "Panton SemiBold", sans-serif;
+$panton-reg: "Panton", sans-serif;
+$panton-light: "Panton Light", sans-serif;
 
 :root {
   font-size: 10px;
@@ -45,7 +45,7 @@ $third-family: "Panton Light", sans-serif;
 }
 
 .phone {
-  font-family: $first-family;
+  font-family: $panton-SemiBold;
   font-weight: 600;
   font-size: 1.6rem;
   color: $dark-purple;
@@ -88,14 +88,14 @@ $third-family: "Panton Light", sans-serif;
         color: $dark-purple;
         text-decoration: none;
         font-size: 1.4rem;
-        font-family: $first-family;
+        font-family: $panton-SemiBold;
       }
     }
   }
 }
 
 .btn-form {
-  font-family: $first-family;
+  font-family: $panton-SemiBold;
   font-weight: 600;
   font-size: 1.4rem;
   text-align: center;
@@ -146,7 +146,7 @@ $third-family: "Panton Light", sans-serif;
     .banner-block__info-text {
       padding-top: 37px;
       .banner-block__title {
-        font-family: $second-family;
+        font-family: $panton-reg;
         font-weight: 700;
         font-size: 4.8rem;
         letter-spacing: 0.03em;
@@ -155,7 +155,7 @@ $third-family: "Panton Light", sans-serif;
       }
 
       .banner-block__description {
-        font-family: $second-family;
+        font-family: $panton-reg;
         font-weight: 400;
         font-size: 2.4rem;
         line-height: 2.8rem;
@@ -213,7 +213,7 @@ $third-family: "Panton Light", sans-serif;
         width: 100%;
 
         .traineeship-slider__title {
-          font-family: $second-family;
+          font-family: $panton-reg;
           font-weight: 700;
           font-size: 2.4rem;
           letter-spacing: 0.03em;
@@ -261,6 +261,7 @@ $third-family: "Panton Light", sans-serif;
     gap: 20px;
     width: 100%;
     margin-top: 40px;
+
     .traineeship-slider__btn-prev,
     .traineeship-slider__btn-next {
       display: flex;
@@ -293,6 +294,247 @@ $third-family: "Panton Light", sans-serif;
         path {
           fill: $magnoly;
         }
+      }
+    }
+  }
+}
+
+/* feedback block */
+.feedback-block {
+  background-image: url("../images/gradient-gaus-part.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 0px;
+  background-position-y: center;
+  .feedback-block__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .feedback-block__title {
+      font-family: $panton-reg;
+      font-weight: 700;
+      font-size: 3.6rem;
+      text-align: center;
+      color: $black;
+    }
+    /* feedback form */
+    .feedback-form {
+      border: 2px solid $dark-purple;
+      border-radius: 30px;
+      width: 501px;
+      height: 630px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 55px 44px 40px 44px;
+      margin-top: 60px;
+      background-color: $magnoly;
+
+      .feedback-form__text {
+        font-family: $panton-light;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 162%;
+        color: $dark-purple;
+      }
+
+      .feedback-form__name,
+      .feedback-form__phone,
+      .feedback-form__internship {
+        width: 100%;
+        border-bottom: 1px solid $dark-purple;
+        display: flex;
+        max-height: 24px;
+      }
+      .feedback-form__phone {
+        margin-top: 56px;
+      }
+      .feedback-form__internship {
+        margin-top: 51px;
+      }
+      .feedback-form__portfolio-link {
+        margin-top: 51px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+          display: flex;
+          width: 100%;
+        }
+        div:first-child {
+          border-bottom: 1px solid $dark-purple;
+          max-height: 24px;
+        }
+        div:nth-child(1) {
+          align-items: center;
+        }
+        .feedback-form_indent_tb {
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+        .feedback-form__file-upload {
+          display: block;
+          background-image: url("../images/icon-upload-file.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+        .feedback-form__file-upload-text {
+          cursor: pointer;
+        }
+      }
+      .feedback-form__message {
+        margin-top: 41px;
+        width: 100%;
+        max-height: 104px;
+
+        .feedback-form__message-area {
+          width: 100%;
+          padding: 0;
+          border: none;
+          outline: none;
+          background: linear-gradient(
+            to bottom,
+            transparent 95%,
+            $dark-purple 95%
+          );
+          background-size: 100% 20px;
+          line-height: 20px;
+          resize: none; /* Запрет изменения размеров */
+        }
+      }
+      .feedback-form__label {
+      }
+      .feedback-form__input {
+        background: none;
+        border: none;
+        outline: none;
+        flex: 1;
+      }
+
+      .feedback-form__subscribe {
+        display: flex;
+        margin-top: 30px;
+        max-height: 33px;
+        align-self: flex-start;
+
+        .feedback-form__checkbox {
+          display: flex;
+          position: relative;
+          width: 24px;
+          height: 24px;
+          border: 2px solid $dark-purple;
+          border-radius: 8px;
+          margin-right: 10px;
+          cursor: pointer;
+
+          .feedback-form__input {
+            display: none;
+          }
+          .feedback-form__input:checked + & {
+            position: relative;
+          }
+        }
+        .feedback-form__checkbox-agree::after {
+          content: "";
+          background-image: url("../images/icon-checkbox.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 20px;
+          height: 28px;
+          color: $dark-purple;
+          position: absolute;
+          right: -3px;
+          top: -3px;
+        }
+        .feedback-form__checkbox-text {
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+          width: 342px;
+          cursor: pointer;
+        }
+      }
+      .feedback-form__submit-btn {
+        padding: 15px 36px;
+        vertical-align: middle;
+        margin-top: 37px;
+        max-width: 235px;
+        max-height: 50px;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}
+
+/* footer styles*/
+.footer-block {
+  .footer-block__wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1298px;
+    margin: 0 auto;
+    border: 2px solid $dark-purple;
+    border-bottom: none;
+    border-radius: 35px 35px 2px 2px;
+    background-color: $magnoly;
+    padding: 21px 35px 19px 37px;
+    .footer-block__logo {
+      flex: 1;
+      .logo {
+        width: 156px;
+        height: 51px;
+        margin-bottom: 16px;
+
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        font-family: $panton-light;
+        font-weight: 300;
+        font-size: 1rem;
+        color: $dark-purple;
+      }
+    }
+    .footer-block__info {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+      gap: 60px;
+      .footer-block__contacts {
+        .footer-block__networks {
+          display: flex;
+          justify-content: flex-end;
+          gap: 11.7px;
+
+          .contact-icon {
+            display: block;
+            width: 25px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-top: 15px;
+          }
+          .contact-icon_vk {
+            background-image: url("../images/icon-vk.svg");
+          }
+          .contact-icon_facebook {
+            background-image: url("../images/icon-facebook.svg");
+          }
+          .contact-icon_insta {
+            background-image: url("../images/icon-instagram.svg");
+          }
+        }
+      }
+      .footer-block__feedback-form {
       }
     }
   }

@@ -126,87 +126,104 @@
                     </svg>
                 </div>
             </div>
-            <div class="application-block header-block_container-width_lg banner-block_indent_lg">
-                <h3 class="application-block__title">Заявка</h3>
-                <form action="/" method="post" class="application-form">
-                    <div class="application-form__name">
-                        <label for="name">Имя:</label>
-                        <input type="text" id="name" name="name" required>
+        </div>
+        <div class="feedback-block banner-block_indent_lg">
+            <div class="feedback-block__wrap header-block_container-width_lg">
+                <h3 class="feedback-block__title">Заявка</h3>
+                <form action="/" method="post" class="feedback-form">
+                    <div class="feedback-form__name">
+                        <label for="name" class="feedback-form__label feedback-form__text">Имя:</label>
+                        <input type="text" id="name" name="name" class="feedback-form__input feedback-form__text"
+                            title="Заполните имя" required>
                     </div>
-                    <div class="application-form__phone">
-                        <label for="phone">Телефон/e-mail:</label>
-                        <input type="text" id="phone" name="phone" required>
+                    <div class="feedback-form__phone">
+                        <label for="feedback-phone-email"
+                            class="feedback-form__label feedback-form__text">Телефон/e-mail:</label>
+                        <input type="text" id="feedback-phone-email" name="phone"
+                            class="feedback-form__input feedback-form__text" title="Заполните телефон/e-mail" required>
                     </div>
-                    <div class="application-form__internship">
-                        <label for="internship">Направление стажировки:</label>
-                        <input type="text" id="internship" name="internship" required>
+                    <div class="feedback-form__internship">
+                        <label for="internship" class="feedback-form__label feedback-form__text">Направление
+                            стажировки:</label>
+                        <input type="text" id="internship" name="internship"
+                            class="feedback-form__input feedback-form__text" title="Заполните направление стажировки"
+                            required>
                     </div>
-                    <div class="application-form__portfolio-link">
+                    <div class="feedback-form__portfolio-link">
                         <div>
-                            <label for="portfolio-link">Ссылка на портфолио:</label>
-                            <input type="url" id="portfolio-link" name="portfolio-link" required>
+                            <label for="portfolio-link" class="feedback-form__label feedback-form__text">Ссылка на
+                                портфолио:</label>
+                            <input type="url" id="portfolio-link" name="portfolio-link"
+                                class="feedback-form__input feedback-form__text"
+                                title="Вставьте ссылку на ваше портфолио" required>
                         </div>
-                        <p>или</p>
-                        <div>
-                            <style>
-                                .application-form__file-upload {
-                                    display: block;
-                                    background-image: url('images/icon-upload-file.svg');
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
-                                    width: 28px;
-                                    height: 28px;
-                                    cursor: pointer;
-                                }
-                            </style>
-
-                            <label class="application-form__file-upload">
-                                <input type="file" style="display: none;" id="application-form__fileupload" />
+                        <p class="feedback-form__text feedback-form_indent_tb">или</p>
+                        <div title="Прикрепить файл портфолио">
+                            <label class="feedback-form__file-upload">
+                                <input type="file" style="display: none;" id="feedback-form__file-upload" />
                             </label>
 
-                            <label id="application-form__fileupload-text" for="application-form__fileupload">Прикрепить
-                                файл
+                            <label id="feedback-form__file-upload-text" for="feedback-form__file-upload"
+                                class="feedback-form__text feedback-form__file-upload-text">Прикрепить файл
                                 портфолио</label>
-
-                            <script>
-
-                            </script>
                         </div>
                     </div>
-                    <div>
-                        <style>
-                            .editable {
-                                border: 1px solid #ccc;
-                                width: 300px;
-                                height: 150px;
-                                padding: 10px;
-                                white-space: pre-wrap;
-                                overflow-y: auto;
-                                text-decoration: underline;
-                                /* Подчеркивание текста */
-                            }
-                        </style>
-
-                        <div class="editable" contenteditable="true" placeholder="Введите текст..."></div>
-                        <!-- <textarea name="talk-about" id="talk-about">Расскажите о себе</textarea> -->
+                    <div class="feedback-form__message">
+                        <textarea id="userInfo" name="userInfo" rows="5" cols="50" placeholder="Расскажите о себе"
+                            class="feedback-form__message-area feedback-form__text"></textarea>
                     </div>
 
-                    <div>
-                        <input type="checkbox" id="subscribe" name="subscribe" value="yes" required>
-                        <label for="subscribe">Отправляя заявку, я подтверждаю
+                    <div class="feedback-form__subscribe">
+                        <label class="feedback-form__checkbox js-feedback-form__checkbox">
+                            <input type="checkbox" id="subscribe" name="subscribe" class="feedback-form__input"
+                                required>
+                        </label>
+
+
+                        <label for="subscribe" class="feedback-form__text feedback-form__checkbox-text">Отправляя
+                            заявку, я подтверждаю
                             свое согласие с политикой конфиденциальности</label>
-
                     </div>
 
-                    <input type="submit" value="Пройти стажировку">
+                    <input type="submit" value="Пройти стажировку"
+                        class="btn-form traineeship-slider__link feedback-form__submit-btn">
                 </form>
             </div>
-
         </div>
     </main>
 
-    <footer>
-
+    <footer class="footer-block banner-block_indent_lg">
+        <div class="footer-block__wrap">
+            <div class="footer-block__logo">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <p>@2021</p>
+            </div>
+            <div class="footer-block__info">
+                <div class="footer-block__contacts">
+                    <div>
+                        <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                    </div>
+                    <div class="footer-block__networks">
+                        <a href="#" class="contact-icon contact-icon_vk" title="vk">
+                            <!-- <i class="contact-icon_vk"></i> -->
+                        </a>
+                        <a href="#" class="contact-icon contact-icon_facebook" title="facebook">
+                            <!-- <i class="contact-icon_facebook"></i> -->
+                        </a>
+                        <a href="#" class="contact-icon contact-icon_insta" title="instagram">
+                            <!-- <i class="contact-icon_insta"></i> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-block__feedback-form">
+                    <button class="btn-form">Подать заявку</button>
+                </div>
+            </div>
+        </div>
 
     </footer>
 </body>

@@ -14,12 +14,23 @@ const traineeshipSlider = new Swiper("#js-traineeship-slider", {
   },
 });
 
-const applicationFormFileupload = document.getElementById(
-  "application-form__fileupload"
+const feedbackFormFileupload = document.getElementById(
+  "feedback-form__file-upload"
 );
 
-applicationFormFileupload.addEventListener("change", function () {
+feedbackFormFileupload.addEventListener("change", function () {
   let fileName = this.value.split("\\").pop(); // Получаем имя файла
-  document.getElementById("application-form__fileupload-text").textContent =
+  document.getElementById("feedback-form__file-upload-text").textContent =
     fileName ? fileName : "Прикрепить файл портфолио"; // Обновляем текст
+});
+
+const subscribeInput = document.getElementById("subscribe");
+const feedbackFormCheckbox = document.querySelector(
+  ".js-feedback-form__checkbox"
+);
+subscribeInput.addEventListener("change", () => {
+  feedbackFormCheckbox.classList.toggle(
+    "feedback-form__checkbox-agree",
+    subscribeInput.checked
+  );
 });
