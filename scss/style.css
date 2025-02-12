@@ -114,6 +114,8 @@
 .banner-block .banner-block__info {
   display: flex;
   gap: 100px;
+  position: relative;
+  z-index: 1;
 }
 .banner-block .banner-block__info .banner-block__info-text {
   padding-top: 37px;
@@ -140,6 +142,7 @@
   position: absolute;
   top: 0;
   right: -105px;
+  z-index: 0;
 }
 
 .banner-block_indent_lg {
@@ -253,6 +256,20 @@
   fill: #f8f6ff;
 }
 
+@media (max-width: 375px) {
+  .traineeship-slider__slide {
+    max-width: 328px;
+    height: 381px;
+    padding: 21px 21px 29px 21px;
+  }
+  .traineeship-slider__slide .traineeship-slider__image {
+    width: 286px;
+    height: 214px;
+  }
+  .traineeship-slider__slide .traineeship-slider__info .traineeship-slider__title {
+    font-size: 1.8rem;
+  }
+}
 /* feedback block */
 .feedback-block {
   background-image: url("../images/gradient-gaus-part.svg");
@@ -417,7 +434,6 @@
 .footer-block .footer-block__wrap {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   max-width: 1298px;
   margin: 0 auto;
   border: 2px solid #352958;
@@ -465,10 +481,23 @@
 }
 .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_vk {
   background-image: url("../images/icon-vk.svg");
+  transition: all 0.3s ease;
+}
+.footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_vk:hover, .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_vk:focus, .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_vk:active {
+  background-image: url("../images/icon-vk-hover.svg");
+  transition: all 0.3s ease;
 }
 .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_facebook {
   background-image: url("../images/icon-facebook.svg");
 }
+.footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_facebook:hover, .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_facebook:focus, .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_facebook:active {
+  background-image: url("../images/icon-facebook-hover.svg");
+  transition: all 0.3s ease;
+}
 .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_insta {
   background-image: url("../images/icon-instagram.svg");
+}
+.footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_insta:hover, .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_insta:focus, .footer-block .footer-block__wrap .footer-block__info .footer-block__contacts .footer-block__networks .contact-icon_insta:active {
+  background-image: url("../images/icon-instagram-hover.svg");
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=style.css.map */

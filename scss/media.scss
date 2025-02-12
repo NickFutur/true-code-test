@@ -1,0 +1,73 @@
+@import "variants";
+
+@media (max-width: 1250px) {
+  .header-block_container-width_lg {
+    width: 98%;
+  }
+}
+
+@media (max-width: 375px) {
+  .header-block_container-width_lg {
+    max-width: 328px;
+    width: 100%;
+  }
+
+  // banner block
+  .banner-block {
+    .banner-block__info {
+      .banner-block__info-text {
+        .banner-block__title {
+          font-size: 2.4rem;
+          max-width: 246px;
+        }
+        .banner-block__description {
+          font-size: 1.3rem;
+          color: $black;
+          width: 100%;
+          line-height: 1.5rem;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .banner-block_indent_lg {
+    margin-top: 35px;
+  }
+
+  .banner-block__model,
+  .banner-block__background-img {
+    display: none;
+  }
+
+  //   trainship slider
+  .traineeship-slider {
+    .traineeship-slider__wrapper {
+      .traineeship-slider__slide {
+        max-width: 282px;
+        height: 327px;
+        padding: 21px 21px 29px 21px;
+        .traineeship-slider__image {
+          width: 286px;
+          height: 214px;
+        }
+        .traineeship-slider__info {
+          .traineeship-slider__title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+          }
+          .traineeship-slider__buttons {
+            flex-flow: row-reverse;
+            gap: 25px;
+
+            .traineeship-slider__link {
+              padding: 16px 30px;
+            }
+            .traineeship-slider__btn {
+              padding: 16px 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

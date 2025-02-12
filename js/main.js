@@ -12,6 +12,22 @@ const traineeshipSlider = new Swiper("#js-traineeship-slider", {
     nextEl: ".traineeship-slider__btn-next",
     prevEl: ".traineeship-slider__btn-prev",
   },
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerView: 2,
+      spaceBetween: 15,
+      slidesPerGroup: 2,
+    },
+    1250: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 const feedbackFormFileupload = document.getElementById(

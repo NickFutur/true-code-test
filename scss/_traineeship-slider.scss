@@ -1,0 +1,136 @@
+/* traineeship slider block */
+.traineeship-slider {
+  .traineeship-slider__wrapper {
+    .traineeship-slider__slide {
+      width: 335px;
+      height: 392px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid #352958;
+      border-radius: 30px;
+      padding: 23px 23px 25px 23px;
+
+      .traineeship-slider__image {
+        width: 339px;
+        height: 267px;
+        border-radius: 30px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        img {
+        }
+      }
+      .traineeship-slider__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        .traineeship-slider__title {
+          font-family: $panton-reg;
+          font-weight: 700;
+          font-size: 2.4rem;
+          letter-spacing: 0.03em;
+          text-align: center;
+          color: $black;
+          margin-bottom: 30px;
+        }
+
+        .traineeship-slider__buttons {
+          display: flex;
+          gap: 23px;
+          justify-content: center;
+          .traineeship-slider__link {
+            padding: 15px 32px;
+          }
+          .traineeship-slider__btn {
+            color: $magnoly;
+            opacity: 1;
+            padding: 15px 32px;
+            background-color: $dark-purple;
+
+            &:hover,
+            &:active {
+              color: $dark-purple;
+              transition: all 0.3s ease;
+            }
+
+            &:hover {
+              background-color: $magnoly;
+            }
+
+            &:active {
+              background-color: $light-blue;
+              color: $magnoly;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .traineeship-slider__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+
+    .traineeship-slider__btn-prev,
+    .traineeship-slider__btn-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $dark-purple;
+      border-radius: 10px;
+      width: 41px;
+      height: 41px;
+      cursor: pointer;
+
+      path {
+        fill: $dark-purple;
+      }
+
+      &:hover,
+      &:active {
+        path {
+          fill: $magnoly;
+        }
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        background-color: $dark-purple;
+      }
+
+      &:active {
+        background-color: $light-blue;
+        path {
+          fill: $magnoly;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .traineeship-slider__slide {
+    max-width: 328px;
+    height: 381px;
+    padding: 21px 21px 29px 21px;
+
+    .traineeship-slider__image {
+      width: 286px;
+      height: 214px;
+    }
+    .traineeship-slider__info {
+      .traineeship-slider__title {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
