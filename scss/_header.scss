@@ -3,16 +3,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .header-block_display_destop {
+    display: flex;
+  }
+  .header-block_display_mobile {
+    display: none;
+  }
+  .header-block__wrap {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 125px;
+
+    .header-block__func-btns {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      gap: 82px;
+    }
+  }
 }
 
 .header-block_container-width_lg {
   max-width: 1225px;
   width: 100%;
   margin: 0 auto;
-}
-
-.logo {
-  height: 56px;
 }
 
 .phone {
@@ -41,7 +57,9 @@
   border: 2px solid $dark-purple;
   border-radius: 10px;
   opacity: 0.88;
-  padding: 13px 37px;
+  width: 170px;
+  height: 41px;
+  // padding: 13px 37px;
   background-color: $magnoly;
   cursor: pointer;
   transition: all 0.3s ease;

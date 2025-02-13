@@ -16,22 +16,78 @@
 
 <body class="main-page main-page_background_color">
     <header class="header-block header-block_container-width_lg">
-        <div class="logo">
-            <a href="/">
-                <img src="images/logo.png" alt="logo">
-            </a>
+        <div class="header-block__wrap header-block_display_destop">
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-block__func-btns">
+                <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#">Вакансии</a></li>
+                        <li class="navigation__item"><a href="#">Кто мы?</a></li>
+                        <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>
+                        <li class="navigation__item"><a href="#">Отзывы</a></li>
+                        <li class="navigation__item"><a href="#">Правила</a></li>
+                    </ul>
+                </nav>
+                <button class="btn-form">Подать заявку</button>
+            </div>
         </div>
-        <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
-        <nav class="navigation">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#">Вакансии</a></li>
-                <li class="navigation__item"><a href="#">Кто мы?</a></li>
-                <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>
-                <li class="navigation__item"><a href="#">Отзывы</a></li>
-                <li class="navigation__item"><a href="#">Правила</a></li>
-            </ul>
-        </nav>
-        <button class="btn-form">Подать заявку</button>
+        <div class="header-block__wrap-mobile header-block_display_mobile">
+            <div class="header-block__logo-menu">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="burger-menu js-burger-menu">
+                    <svg width="41" height="33" viewBox="0 0 41 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H38M3 16.5H38M3 30H38" stroke="#352958" stroke-width="6" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="header-block__contacts">
+                <div class="header-block__email-phone">
+                    <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                    <a href="mailto:support@t-code.ru" class="phone">support@t-code.ru</a>
+                </div>
+                <div>
+                    <button class="btn-form">Подать заявку</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-block__mobile" style="display:none;">
+            <div class="nav-block__menu">
+                <nav>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#">Вакансии</a></li>
+                        <li class="navigation__item"><a href="#">Кто мы?</a></li>
+                        <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>
+                        <li class="navigation__item"><a href="#">Отзывы</a></li>
+                        <li class="navigation__item"><a href="#">Правила</a></li>
+                    </ul>
+                    <button class="btn-form">Подать заявку</button>
+                </nav>
+            </div>
+            <div class="nav-block__info">
+                <div>
+                    <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                </div>
+                <div class="networks">
+                    <a href="#" class="contact-icon contact-icon_vk" title="vk">
+                    </a>
+                    <a href="#" class="contact-icon contact-icon_facebook" title="facebook">
+                    </a>
+                    <a href="#" class="contact-icon contact-icon_insta" title="instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </header>
     <main>
         <div class="banner-block banner-block_indent_lg">
@@ -121,11 +177,23 @@
                     </svg>
                 </div>
                 <div class="traineeship-slider__btn-next">
-                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="traineeship-slider_svg-next_big">
                         <path
                             d="M11 7.49998C11 7.23114 10.8679 6.96235 10.6044 6.75739L2.30691 0.307713C1.77909 -0.102571 0.923317 -0.102571 0.395707 0.307713C-0.131902 0.71783 -0.131902 1.3829 0.395707 1.79322L7.73778 7.49998L0.395963 13.2068C-0.131647 13.617 -0.131647 14.2821 0.395963 14.6921C0.923572 15.1026 1.77935 15.1026 2.30717 14.6921L10.6047 8.24256C10.8682 8.0375 11 7.76871 11 7.49998Z" />
                     </svg>
+                    <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="traineeship-slider_svg-next_small">
+                        <path
+                            d="M1.2217 3.77419L11.0978 13.6503C11.8682 14.4166 13.1125 14.4166 13.8828 13.6503L23.7589 3.77419C24.3929 3.03548 24.3929 1.94317 23.7589 1.20447C23.0498 0.376812 21.8015 0.28009 20.9738 0.989209L12.5002 9.46278L4.00678 0.989107C3.2364 0.222713 1.99208 0.222712 1.2217 0.989107C0.45531 1.75949 0.45531 3.00391 1.2217 3.77419Z"
+                            fill="#352958" />
+                    </svg>
                 </div>
+            </div>
+        </div>
+        <div class="modal-image banner-block_indent_lg">
+            <div class="modal-image__wrap">
+                <img src="images/objects-three-d.png" alt="3D object model">
             </div>
         </div>
         <div class="feedback-block banner-block_indent_lg">
@@ -208,7 +276,7 @@
                     <div>
                         <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
                     </div>
-                    <div class="footer-block__networks">
+                    <div class="networks">
                         <a href="#" class="contact-icon contact-icon_vk" title="vk">
                             <!-- <i class="contact-icon_vk"></i> -->
                         </a>
@@ -224,6 +292,7 @@
                     <button class="btn-form">Подать заявку</button>
                 </div>
             </div>
+            <p>@2021</p>
         </div>
 
     </footer>

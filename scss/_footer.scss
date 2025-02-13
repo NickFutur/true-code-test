@@ -3,7 +3,7 @@
   .footer-block__wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 1298px;
+    max-width: 1222px;
     margin: 0 auto;
     border: 2px solid $dark-purple;
     border-bottom: none;
@@ -26,6 +26,7 @@
         font-weight: 300;
         font-size: 1rem;
         color: $dark-purple;
+        display: inline;
       }
     }
     .footer-block__info {
@@ -35,52 +36,60 @@
       flex: 1;
       gap: 60px;
       .footer-block__contacts {
-        .footer-block__networks {
-          display: flex;
-          justify-content: flex-end;
-          gap: 11.7px;
-
-          .contact-icon {
-            display: block;
-            width: 25px;
-            height: 24px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            margin-top: 15px;
-          }
-          .contact-icon_vk {
-            background-image: url("../images/icon-vk.svg");
-            transition: all 0.3s ease;
-            &:hover,
-            &:focus,
-            &:active {
-              background-image: url("../images/icon-vk-hover.svg");
-              transition: all 0.3s ease;
-            }
-          }
-
-          .contact-icon_facebook {
-            background-image: url("../images/icon-facebook.svg");
-            &:hover,
-            &:focus,
-            &:active {
-              background-image: url("../images/icon-facebook-hover.svg");
-              transition: all 0.3s ease;
-            }
-          }
-          .contact-icon_insta {
-            background-image: url("../images/icon-instagram.svg");
-            &:hover,
-            &:focus,
-            &:active {
-              background-image: url("../images/icon-instagram-hover.svg");
-              transition: all 0.3s ease;
-            }
-          }
-        }
       }
       .footer-block__feedback-form {
+        .btn-form {
+          width: 197px;
+          height: 56px;
+        }
       }
+    }
+    p {
+      display: none;
+    }
+  }
+}
+
+.networks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 11.7px;
+
+  .contact-icon {
+    display: block;
+    width: 25px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 15px;
+  }
+  .contact-icon_vk {
+    background-image: url("../images/icon-vk.svg");
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../images/icon-vk-hover.svg");
+      transition: all 0.3s ease;
+    }
+  }
+
+  .contact-icon_facebook {
+    background-image: url("../images/icon-facebook.svg");
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../images/icon-facebook-hover.svg");
+      transition: all 0.3s ease;
+    }
+  }
+  .contact-icon_insta {
+    background-image: url("../images/icon-instagram.svg");
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../images/icon-instagram-hover.svg");
+      transition: all 0.3s ease;
     }
   }
 }

@@ -1,6 +1,6 @@
 const traineeshipSlider = new Swiper("#js-traineeship-slider", {
   // Optional parameters
-  direction: "horizontal",
+  direction: "vertical",
   loop: true,
   autoplay: false,
   slidesPerView: 3,
@@ -13,19 +13,27 @@ const traineeshipSlider = new Swiper("#js-traineeship-slider", {
     prevEl: ".traineeship-slider__btn-prev",
   },
   breakpoints: {
-    375: {
+    480: {
+      slidesPerView: 3,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    481: {
+      direction: "horizontal",
       slidesPerView: 1,
       slidesPerView: 1,
+      spaceBetween: 15,
       slidesPerGroup: 1,
     },
-    768: {
+    850: {
       slidesPerView: 2,
       slidesPerView: 2,
-      spaceBetween: 15,
       slidesPerGroup: 2,
     },
     1250: {
       slidesPerView: 3,
+      spaceBetween: 35,
+      slidesPerGroup: 3,
     },
   },
 });
