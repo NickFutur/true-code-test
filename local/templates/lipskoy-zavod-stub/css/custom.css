@@ -1,0 +1,333 @@
+/*--  User new style  --*/
+
+/* .banner-slogan {
+    display: flex;
+} */
+
+:root {
+    font-size: 16px;
+}
+
+.banner-slogan h1 {
+    line-height: 1.1;
+    letter-spacing: -.65px;
+    color: #0B622F;
+    text-shadow: 1px 1px 0px #FFF;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+.banner-slogan img {
+    width: 20%;
+    height: auto;
+}
+
+.banner-additional-text {
+    margin-top: 5%;
+    padding-right: 10%;
+}
+
+.banner-additional-text p {
+    color: #0B622F;
+    font-size: 1.5rem;
+}
+
+.footer-list {
+    columns: 2;
+}
+
+#nav-menu ul.nav-menu li:last-child a {
+    color: #FEFEFE;
+}
+
+#nav-menu ul.nav-menu li:last-child a:hover {
+    transition: all 1s ease-in-out;
+    color: #0B622F;
+}
+
+#nav-menu ul.nav-menu li:last-child {
+    border-radius: 3px;
+    background: #0B622F;
+}
+
+#nav-menu ul.nav-menu li:last-child:hover {
+    transition: all 1s ease-in-out;
+    background: #FEFEFE;
+    border-radius: 3px;
+}
+
+.menu-sticky {
+    height: 100px;
+}
+
+.menuZIndex {
+    position: relative;
+    z-index: 1;
+}
+
+/* Стили catalog */
+.catalog-list {
+    columns: 2;
+    width: 100%;
+}
+
+.breadcrumbs {
+    z-index: 100;
+}
+
+.breadcrumbs-list li {
+    margin-bottom: 0;
+}
+
+/* styles section metalloobrabotka */
+
+.section-metal-image {
+    max-width: 50%;
+}
+
+.section-metal-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.section-metal-text {
+    padding-left: 2%;
+}
+
+.section-metal {
+    padding: 0;
+    margin: 0;
+}
+
+.section-metal-text h1 {
+    font-size: 3rem;
+}
+
+.section-metal-text p {
+    font-size: 1.5rem;
+}
+
+/* Новости */
+.news-detail h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.news-title-detail {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.detail-news-picture {
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .header-inner {
+        height: 150px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .banner-slogan {
+        /* width: 100% !important; */
+        padding-right: 0 !important;
+    }
+}
+
+@media (min-width: 1570px) {
+    .banner-conteiner {
+        margin-top: 3%;
+    }
+
+}
+
+@media (max-width:1440px) {
+    .banner-slogan {
+        width: 90%;
+    }
+
+    .banner-slogan h1 {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width:1200px) {
+    .banner-slogan h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner-slogan h1 {
+        font-size: 4rem;
+    }
+
+    .operating_mode .time .clock_ico {
+        padding: 0px 0 0 25px;
+    }
+
+    .news-title-detail {
+        font-size: 2rem;
+    }
+
+    .news-detail h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-slogan h1 {
+        font-size: 3rem;
+    }
+
+    .banner-slogan {
+        width: 100%;
+        padding-right: 0 !important;
+    }
+
+    .catalog-list {
+        columns: 1;
+        width: 100%;
+    }
+
+    #nav-menu .navbar {
+        justify-content: flex-end;
+    }
+
+    .section-metal-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-metal-image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .section-metal-image img {
+        margin-bottom: 7%;
+    }
+
+    .section-metal {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .header-index-section::before {
+        height: 127px;
+    }
+
+    .banner-additional-text {
+        padding-right: 15%;
+    }
+
+    .banner-additional-text p {
+        font-size: 1.0rem;
+    }
+
+    .news-title-detail {
+        font-size: 1.7rem;
+    }
+
+    .news-detail h3 {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (max-width:485px) {
+    .banner-slogan h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-slogan {
+        padding-bottom: 0 !important;
+        padding-top: 1rem;
+    }
+
+    .footer-list {
+        columns: 1;
+        text-align: center;
+    }
+
+    .list-text {
+        text-align: center;
+    }
+
+    #products-section .title {
+        font-size: 1.5rem;
+    }
+
+    .section-metal-text h1 {
+        font-size: 2rem;
+    }
+
+    .section-metal-text p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:375px) {
+    .banner-slogan h1 {
+        font-size: 2rem;
+    }
+
+    .section-metal-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-metal-text p {
+        font-size: 1rem;
+    }
+}
+
+.main-block {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-block_stub {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-block_stub h3 {
+    font-size: 30px;
+}
+
+.clock_ico {
+    color: #80817C;
+}
+
+.calendar_ico {
+    color: #80817C;
+}
+
+
+
+@media (max-width: 767px) {
+    .detail-news-picture {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .news-detail img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+.ul-style-type-none {
+    list-style-type: none;
+    margin-bottom: 0;
+}

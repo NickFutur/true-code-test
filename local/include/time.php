@@ -1,0 +1,1 @@
+<span class="clock_ico">9:00 − 17:00</span> <span class="small_font d-none d-md-block">МСК</span>

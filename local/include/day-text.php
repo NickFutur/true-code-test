@@ -1,0 +1,1 @@
+<span class="calendar_ico">Пн − Пт</span>
