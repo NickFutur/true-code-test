@@ -1,6 +1,6 @@
 const traineeshipSlider = new Swiper("#js-traineeship-slider", {
   // Optional parameters
-  direction: "vertical",
+  direction: "horizontal",
   loop: true,
   autoplay: false,
   slidesPerView: 3,
@@ -13,6 +13,12 @@ const traineeshipSlider = new Swiper("#js-traineeship-slider", {
     prevEl: ".traineeship-slider__btn-prev",
   },
   breakpoints: {
+    0: {
+      direction: "vertical",
+      slidesPerView: 3,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
     480: {
       slidesPerView: 3,
       slidesPerView: 3,
@@ -57,4 +63,15 @@ subscribeInput.addEventListener("change", () => {
     "feedback-form__checkbox-agree",
     subscribeInput.checked
   );
+});
+
+const menuBurgerBtn = document.querySelectorAll(".js-burger-menu");
+const menuNavMobile = document.querySelector(".js-nav-block__mobile");
+menuBurgerBtn.forEach((burgerBtn) => {
+  burgerBtn.addEventListener("click", () => {
+    menuNavMobile.classList.toggle("open-menu");
+  });
+});
+menuNavMobile.addEventListener("click", () => {
+  menuNavMobile.classList.toggle("open-menu");
 });

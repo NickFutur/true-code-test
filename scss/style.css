@@ -25,6 +25,9 @@
 .header-block .header-block_display_mobile {
   display: none;
 }
+.header-block .nav-block__mobile {
+  display: none;
+}
 .header-block .header-block__wrap {
   width: 100%;
   justify-content: space-between;
@@ -84,6 +87,10 @@
   text-decoration: none;
   font-size: 1.4rem;
   font-family: "Panton SemiBold", sans-serif;
+}
+
+.open-menu {
+  display: flex !important;
 }
 
 .btn-form {

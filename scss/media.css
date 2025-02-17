@@ -58,7 +58,7 @@
     padding: 0;
   }
   .header-block .nav-block__mobile {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
