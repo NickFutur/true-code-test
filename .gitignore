@@ -1,0 +1,15 @@
+# Игнорировать всё
+/*
+
+# Исключить папки local и vakansii
+!/local/
+!/vakansii/
+
+# Исключить файлы index.php и .left.menu.php
+!/index.php
+!/.left.menu.php
+
+# Игнорировать всё внутри папок, кроме local и vakansii
+/*/*
+!/local/**
+!/vakansii/**
