@@ -1,0 +1,39 @@
+/* menu styles*/
+.navigation {
+  .navigation__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    .navigation__item {
+      position: relative;
+      &::after {
+        content: " ";
+        height: 1px;
+        width: 0;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        background: $dark-purple;
+        transition: all 0.3s ease;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        &::after {
+          transition: all 0.3s ease;
+          width: 100%;
+        }
+      }
+      a {
+        color: $dark-purple;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-family: $panton-SemiBold;
+      }
+    }
+  }
+}
+
+.open-menu {
+  display: flex !important;
+}

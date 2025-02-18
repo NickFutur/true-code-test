@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Code test</title>
+    <link rel="stylesheet" href="scss/reset.css">
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/media.css">
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</head>
+
+<body class="main-page main-page_background_color">
+    <header class="header-block header-block_container-width_lg">
+        <div class="header-block__wrap header-block_display_destop">
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-block__func-btns">
+                <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#">Вакансии</a></li>
+                        <li class="navigation__item"><a href="#">Кто мы?</a></li>
+                        <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>
+                        <li class="navigation__item"><a href="#">Отзывы</a></li>
+                        <li class="navigation__item"><a href="#">Правила</a></li>
+                    </ul>
+                </nav>
+                <button class="btn-form">Подать заявку</button>
+            </div>
+        </div>
+        <div class="header-block__wrap-mobile header-block_display_mobile">
+            <div class="header-block__logo-menu">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="burger-menu js-burger-menu">
+                    <svg width="41" height="33" viewBox="0 0 41 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H38M3 16.5H38M3 30H38" stroke="#352958" stroke-width="6" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="header-block__contacts">
+                <div class="header-block__email-phone">
+                    <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                    <a href="mailto:support@t-code.ru" class="phone">support@t-code.ru</a>
+                </div>
+                <div>
+                    <button class="btn-form">Подать заявку</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-block__mobile js-nav-block__mobile">
+            <div class="nav-block__menu">
+                <nav>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#">Вакансии</a></li>
+                        <li class="navigation__item"><a href="#">Кто мы?</a></li>
+                        <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>
+                        <li class="navigation__item"><a href="#">Отзывы</a></li>
+                        <li class="navigation__item"><a href="#">Правила</a></li>
+                    </ul>
+                    <button class="btn-form">Подать заявку</button>
+                </nav>
+            </div>
+            <div class="nav-block__info">
+                <div>
+                    <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                </div>
+                <div class="networks">
+                    <a href="#" class="contact-icon contact-icon_vk" title="vk">
+                    </a>
+                    <a href="#" class="contact-icon contact-icon_facebook" title="facebook">
+                    </a>
+                    <a href="#" class="contact-icon contact-icon_insta" title="insta">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="banner-block banner-block_indent_lg">
+            <div class="banner-block__info header-block_container-width_lg">
+                <div class="banner-block__info-text">
+                    <h1 class="banner-block__title">Мы открываем набор на наши огненные стажировки!</h1>
+                    <h6 class="banner-block__description">
+                        Присоединяйся к нашей дружной команде и начни свой путь в мире digital.
+                    </h6>
+                </div>
+                <div class="banner-block__model">
+                    <img src="images/objects-three-d.png" alt="3D object model">
+                </div>
+            </div>
+            <img class="banner-block__background-img" src="images/icon-slogan.svg">
+        </div>
+        <div class="traineeship-slider header-block_container-width_lg banner-block_indent_lg">
+            <div class="swiper" id="js-traineeship-slider">
+                <div class="traineeship-slider__wrapper swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="traineeship-slider__slide">
+                            <div class="traineeship-slider__image">
+                                <img src="images/photo-web-disiner.png" alt="Веб-дизайнер" srcset="">
+                            </div>
+                            <div class="traineeship-slider__info">
+                                <h3 class="traineeship-slider__title">Веб-дизайнер</h3>
+                                <div class="traineeship-slider__buttons">
+                                    <a class="btn-form traineeship-slider__link" href="#">Подробнее</a>
+                                    <button class="btn-form traineeship-slider__btn" type="button">Подать
+                                        заявку</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="traineeship-slider__slide">
+                            <div class="traineeship-slider__image">
+                                <img src="images/photo-programmer.png" alt="Разработчик" srcset="">
+                            </div>
+                            <div class="traineeship-slider__info">
+                                <h3 class="traineeship-slider__title">Разработчик</h3>
+                                <div class="traineeship-slider__buttons">
+                                    <a class="btn-form traineeship-slider__link" href="#">Подробнее</a>
+                                    <button class="btn-form traineeship-slider__btn" type="button">Подать
+                                        заявку</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="traineeship-slider__slide">
+                            <div class="traineeship-slider__image">
+                                <img src="images/photo-project-manager.png" alt="Менеджер проектов" srcset="">
+                            </div>
+                            <div class="traineeship-slider__info">
+                                <h3 class="traineeship-slider__title">Менеджер проектов</h3>
+                                <div class="traineeship-slider__buttons">
+                                    <a class="btn-form traineeship-slider__link" href="#">Подробнее</a>
+                                    <button class="btn-form traineeship-slider__btn" type="button">Подать
+                                        заявку</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="traineeship-slider__slide">
+                            <div class="traineeship-slider__image">
+                                <img src="images/photo-project-manager.png" alt="Менеджер проектов" srcset="">
+                            </div>
+                            <div class="traineeship-slider__info">
+                                <h3 class="traineeship-slider__title">Менеджер проектов</h3>
+                                <div class="traineeship-slider__buttons">
+                                    <a class="btn-form traineeship-slider__link" href="#">Подробнее</a>
+                                    <button class="btn-form traineeship-slider__btn" type="button">Подать
+                                        заявку</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="traineeship-slider__pagination">
+                <div class="traineeship-slider__btn-prev">
+                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.3583e-07 7.50002C3.23793e-07 7.76885 0.132052 8.03765 0.395601 8.24261L8.69309 14.6923C9.22091 15.1026 10.0767 15.1026 10.6043 14.6923C11.1319 14.2822 11.1319 13.6171 10.6043 13.2068L3.26222 7.50002L10.604 1.79323C11.1316 1.38295 11.1316 0.717947 10.604 0.307862C10.0764 -0.10262 9.22065 -0.10262 8.69283 0.307862L0.395344 6.75744C0.131753 6.9625 3.47863e-07 7.23129 3.3583e-07 7.50002Z" />
+                    </svg>
+                </div>
+                <div class="traineeship-slider__btn-next">
+                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="traineeship-slider_svg-next_big">
+                        <path
+                            d="M11 7.49998C11 7.23114 10.8679 6.96235 10.6044 6.75739L2.30691 0.307713C1.77909 -0.102571 0.923317 -0.102571 0.395707 0.307713C-0.131902 0.71783 -0.131902 1.3829 0.395707 1.79322L7.73778 7.49998L0.395963 13.2068C-0.131647 13.617 -0.131647 14.2821 0.395963 14.6921C0.923572 15.1026 1.77935 15.1026 2.30717 14.6921L10.6047 8.24256C10.8682 8.0375 11 7.76871 11 7.49998Z" />
+                    </svg>
+                    <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="traineeship-slider_svg-next_small">
+                        <path
+                            d="M1.2217 3.77419L11.0978 13.6503C11.8682 14.4166 13.1125 14.4166 13.8828 13.6503L23.7589 3.77419C24.3929 3.03548 24.3929 1.94317 23.7589 1.20447C23.0498 0.376812 21.8015 0.28009 20.9738 0.989209L12.5002 9.46278L4.00678 0.989107C3.2364 0.222713 1.99208 0.222712 1.2217 0.989107C0.45531 1.75949 0.45531 3.00391 1.2217 3.77419Z"
+                            fill="#352958" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="modal-image banner-block_indent_lg">
+            <div class="modal-image__wrap">
+                <img src="images/objects-three-d.png" alt="3D object model">
+            </div>
+        </div>
+        <div class="feedback-block banner-block_indent_lg">
+            <div class="feedback-block__wrap header-block_container-width_lg">
+                <h3 class="feedback-block__title">Заявка</h3>
+                <form action="/" method="post" class="feedback-form">
+                    <div class="feedback-form__name">
+                        <label for="name" class="feedback-form__label feedback-form__text">Имя:</label>
+                        <input type="text" id="name" name="name" class="feedback-form__input feedback-form__text"
+                            title="Заполните имя" required>
+                    </div>
+                    <div class="feedback-form__phone">
+                        <label for="feedback-phone-email"
+                            class="feedback-form__label feedback-form__text">Телефон/e-mail:</label>
+                        <input type="text" id="feedback-phone-email" name="phone"
+                            class="feedback-form__input feedback-form__text" title="Заполните телефон/e-mail" required>
+                    </div>
+                    <div class="feedback-form__internship">
+                        <label for="internship" class="feedback-form__label feedback-form__text">Направление
+                            стажировки:</label>
+                        <input type="text" id="internship" name="internship"
+                            class="feedback-form__input feedback-form__text" title="Заполните направление стажировки"
+                            required>
+                    </div>
+                    <div class="feedback-form__portfolio-link">
+                        <div>
+                            <label for="portfolio-link" class="feedback-form__label feedback-form__text">Ссылка на
+                                портфолио:</label>
+                            <input type="url" id="portfolio-link" name="portfolio-link"
+                                class="feedback-form__input feedback-form__text"
+                                title="Вставьте ссылку на ваше портфолио" required>
+                        </div>
+                        <p class="feedback-form__text feedback-form_indent_tb">или</p>
+                        <div title="Прикрепить файл портфолио">
+                            <label class="feedback-form__file-upload">
+                                <input type="file" style="display: none;" id="feedback-form__file-upload" />
+                            </label>
+
+                            <label id="feedback-form__file-upload-text" for="feedback-form__file-upload"
+                                class="feedback-form__text feedback-form__file-upload-text">Прикрепить файл
+                                портфолио</label>
+                        </div>
+                    </div>
+                    <div class="feedback-form__message">
+                        <textarea id="userInfo" name="userInfo" rows="5" cols="50" placeholder="Расскажите о себе"
+                            class="feedback-form__message-area feedback-form__text"></textarea>
+                    </div>
+
+                    <div class="feedback-form__subscribe">
+                        <label class="feedback-form__checkbox js-feedback-form__checkbox">
+                            <input type="checkbox" id="subscribe" name="subscribe" class="feedback-form__input"
+                                required>
+                        </label>
+
+
+                        <label for="subscribe" class="feedback-form__text feedback-form__checkbox-text">Отправляя
+                            заявку, я подтверждаю
+                            свое согласие с политикой конфиденциальности</label>
+                    </div>
+
+                    <input type="submit" value="Пройти стажировку"
+                        class="btn-form traineeship-slider__link feedback-form__submit-btn">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-block banner-block_indent_lg">
+        <div class="footer-block__wrap">
+            <div class="footer-block__logo">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <p>@2021</p>
+            </div>
+            <div class="footer-block__info">
+                <div class="footer-block__contacts">
+                    <div>
+                        <a href="tel:+73952261260" class="phone">+7 (3952) 26-12-60</a>
+                    </div>
+                    <div class="networks">
+                        <a href="#" class="contact-icon contact-icon_vk" title="vk">
+                            <!-- <i class="contact-icon_vk"></i> -->
+                        </a>
+                        <a href="#" class="contact-icon contact-icon_facebook" title="facebook">
+                            <!-- <i class="contact-icon_facebook"></i> -->
+                        </a>
+                        <a href="#" class="contact-icon contact-icon_insta" title="instagram">
+                            <!-- <i class="contact-icon_insta"></i> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-block__feedback-form">
+                    <button class="btn-form">Подать заявку</button>
+                </div>
+            </div>
+            <p>@2021</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
