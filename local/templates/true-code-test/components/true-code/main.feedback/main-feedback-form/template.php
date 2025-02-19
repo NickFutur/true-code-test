@@ -24,7 +24,8 @@ if($arResult["OK_MESSAGE"] <> '')
 }
 ?>
 
-    <form action="<?=POST_FORM_ACTION_URI?>" method="POST" class="feedback-form" enctype="multipart/form-data">
+    <form action="<?=POST_FORM_ACTION_URI?>" method="POST" class="feedback-form" id="main-feedback-form"
+        enctype="multipart/form-data">
         <?=bitrix_sessid_post()?>
         <div class="feedback-form__name">
             <label for="user_name" class="feedback-form__label feedback-form__text"><?=GetMessage("MFT_NAME")?></label>
@@ -32,16 +33,16 @@ if($arResult["OK_MESSAGE"] <> '')
                 title="Заполните имя" value="<?=$arResult["AUTHOR_NAME"]?>" <?if(empty($arParams["REQUIRED_FIELDS"]) ||
                 in_array("NAME", $arParams["REQUIRED_FIELDS"])): echo "required" ;?>
             <?endif?> >
-
         </div>
-        <div class="feedback-form__phone">
+        <div class="feedback-form__phone js-feedback-form__phone">
             <label for="feedback-phone-email"
                 class="feedback-form__label feedback-form__text"><?=GetMessage("MFT_EMAIL")?></label>
             <input type="text" id="feedback-phone-email" name="user_phone_email"
                 class="feedback-form__input feedback-form__text" title="<?=GetMessage("MFT_EMAIL")?>"
                 value="<?=$arResult["user_phone_email"]?>" <?if(empty($arParams["REQUIRED_FIELDS"]) ||
                 in_array("user_phone_email", $arParams["REQUIRED_FIELDS"])): echo "required" ;?>
-            <?endif?>>
+            <?endif?> placeholder="+7(96_)_-_-_">
+            <span class="feedback-form__error-message_none">* введите номер в формате: XXXX</span>
         </div>
         <div class="feedback-form__internship">
             <label for="internship"
@@ -101,7 +102,7 @@ if($arResult["OK_MESSAGE"] <> '')
 
         <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
         <input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>"
-            class="btn-form traineeship-slider__link feedback-form__submit-btn">
+            class="btn-form traineeship-slider__link feedback-form__submit-btn" id="js-feedback-form__submit">
     </form>
 </div>
 
@@ -125,5 +126,15 @@ subscribeInput.addEventListener("change", () => {
         "feedback-form__checkbox-agree",
         subscribeInput.checked
     );
+});
+
+const mainFeedbackForm = document.getElementById('js-feedback-form__submit');
+const feedbackPhoneEmailInput = document.getElementById('feedback-phone-email');
+const feedbackFormPhoneEmailBlock = document.querySelector('.js-feedback-form__phone');
+const errorMessage = feedbackFormPhoneEmailBlock.querySelector(".feedback-form__error-message_none");
+mainFeedbackForm.addEventListener('click', () => {
+    if (feedbackPhoneEmailInput.hasAttribute('required') && feedbackPhoneEmailInput.value.trim() === '') {
+        errorMessage.classList.add("feedback-form__error-message_block");
+    }
 });
 </script>

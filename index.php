@@ -5,8 +5,9 @@ $APPLICATION->SetPageProperty("keywords", "липской завод, рулон
 $APPLICATION->SetPageProperty("title", "Обработка поверхности рулонных материалов. Инструментальные работы.");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Липской завод");
-?><main>
-<?$APPLICATION->IncludeComponent(
+?>
+<main>
+    <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -15,7 +16,8 @@ $APPLICATION->SetTitle("Липской завод");
 		"EDIT_TEMPLATE" => "",
 		"PATH" => "/local/include/banner-block.php"
 	)
-);?> <?$APPLICATION->IncludeComponent(
+);?>
+    <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.top",
 	"vakansii-slider",
 	Array(
@@ -73,25 +75,26 @@ $APPLICATION->SetTitle("Липской завод");
 		"VIEW_MODE" => "SLIDER"
 	)
 );?>
-<div class="modal-image banner-block_indent_lg">
-	<div class="modal-image__wrap">
- <img alt="3D object model" src="/local/templates/true-code-test/images/objects-three-d.png">
-	</div>
-</div>
-<div class="feedback-block banner-block_indent_lg">
-	<div class="feedback-block__wrap header-block_container-width_lg">
-		<h3 class="feedback-block__title">Заявка</h3>
-		 <?$APPLICATION->IncludeComponent(
+    <div class="modal-image banner-block_indent_lg">
+        <div class="modal-image__wrap">
+            <img alt="3D object model" src="/local/templates/true-code-test/images/objects-three-d.png">
+        </div>
+    </div>
+    <div class="feedback-block banner-block_indent_lg">
+        <div class="feedback-block__wrap header-block_container-width_lg">
+            <h3 class="feedback-block__title">Заявка</h3>
+            <?$APPLICATION->IncludeComponent(
 	"true-code:main.feedback",
 	"main-feedback-form",
 	Array(
 		"EMAIL_TO" => "morinnikita31@gmail.com",
 		"EVENT_MESSAGE_ID" => array("13"),
 		"OK_TEXT" => "Спасибо, ваша заявка принята",
-		"REQUIRED_FIELDS" => array("NAME"),
+		"REQUIRED_FIELDS" => array("NAME", "user_phone_email", "user_intership"),
 		"USE_CAPTCHA" => "N"
 	)
 );?>
-	</div>
-</div>
- </main><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+        </div>
+    </div>
+</main>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

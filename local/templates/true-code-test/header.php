@@ -158,4 +158,5 @@ $curPage = $APPLICATION->GetCurPage(false); ?>
             </div>
         </div>
 
-    </header <main>
+    </header>
+    <main>
