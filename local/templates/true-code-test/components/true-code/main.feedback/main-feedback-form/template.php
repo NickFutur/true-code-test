@@ -128,13 +128,19 @@ subscribeInput.addEventListener("change", () => {
     );
 });
 
-const mainFeedbackForm = document.getElementById('js-feedback-form__submit');
+const mainFeedbackFormSubmit = document.getElementById('js-feedback-form__submit');
 const feedbackPhoneEmailInput = document.getElementById('feedback-phone-email');
 const feedbackFormPhoneEmailBlock = document.querySelector('.js-feedback-form__phone');
 const errorMessage = feedbackFormPhoneEmailBlock.querySelector(".feedback-form__error-message_none");
-mainFeedbackForm.addEventListener('click', () => {
-    if (feedbackPhoneEmailInput.hasAttribute('required') && feedbackPhoneEmailInput.value.trim() === '') {
-        errorMessage.classList.add("feedback-form__error-message_block");
+
+mainFeedbackFormSubmit.addEventListener('click', () =>
+    mainFeedbackFormClick(feedbackPhoneEmailInput, errorMessage)
+);
+
+
+function mainFeedbackFormClick(feedbackInput, feedbackErrorMessage) {
+    if (feedbackInput.hasAttribute('required') && feedbackInput.value.trim() === '') {
+        feedbackErrorMessage.classList.add("feedback-form__error-message_block");
     }
-});
+}
 </script>
