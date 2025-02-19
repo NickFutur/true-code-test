@@ -39,34 +39,17 @@ const traineeshipSlider = new Swiper("#js-traineeship-slider", {
   },
 });
 
-const feedbackFormFileupload = document.getElementById(
-  "feedback-form__file-upload"
-);
-
-feedbackFormFileupload.addEventListener("change", function () {
-  let fileName = this.value.split("\\").pop(); // Получаем имя файла
-  document.getElementById("feedback-form__file-upload-text").textContent =
-    fileName ? fileName : "Прикрепить файл портфолио"; // Обновляем текст
-});
-
-const subscribeInput = document.getElementById("subscribe");
-const feedbackFormCheckbox = document.querySelector(
-  ".js-feedback-form__checkbox"
-);
-subscribeInput.addEventListener("change", () => {
-  feedbackFormCheckbox.classList.toggle(
-    "feedback-form__checkbox-agree",
-    subscribeInput.checked
-  );
-});
-
 const menuBurgerBtn = document.querySelectorAll(".js-burger-menu");
 const menuNavMobile = document.querySelector(".js-nav-block__mobile");
+const menuNavBlockMobile = document.querySelector(".nav-block__menu");
 menuBurgerBtn.forEach((burgerBtn) => {
   burgerBtn.addEventListener("click", () => {
     menuNavMobile.classList.toggle("open-menu");
   });
 });
-menuNavMobile.addEventListener("click", () => {
-  // menuNavMobile.classList.toggle("open-menu");
+
+menuNavMobile.addEventListener("click", (e) => {
+  if (!menuNavBlockMobile.contains(e.target)) {
+    menuNavMobile.classList.toggle("open-menu");
+  }
 });

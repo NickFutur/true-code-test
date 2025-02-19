@@ -39,8 +39,8 @@ if($arResult["OK_MESSAGE"] <> '')
                 class="feedback-form__label feedback-form__text"><?=GetMessage("MFT_EMAIL")?></label>
             <input type="text" id="feedback-phone-email" name="user_phone_email"
                 class="feedback-form__input feedback-form__text" title="<?=GetMessage("MFT_EMAIL")?>"
-                value="<?=$arResult["user_phone_email"]?>" <?if(empty($arParams["REQUIRED_FIELDS"]) || in_array("user_phone_email",
-                $arParams["REQUIRED_FIELDS"])): echo "required" ;?>
+                value="<?=$arResult["user_phone_email"]?>" <?if(empty($arParams["REQUIRED_FIELDS"]) ||
+                in_array("user_phone_email", $arParams["REQUIRED_FIELDS"])): echo "required" ;?>
             <?endif?>>
         </div>
         <div class="feedback-form__internship">
@@ -67,11 +67,12 @@ if($arResult["OK_MESSAGE"] <> '')
             </p>
             <div title="<?=GetMessage("MFT_PORTFOLIO_FILE")?>">
                 <label class="feedback-form__file-upload"> <input type="file" style="display: none;"
-                        id="feedback-form__file-upload" name="user_portfolio_file" accept=".pdf,.doc,.docx,.jpg,.png,.txt" value="<?=$arResult["user_portfolio_file"]?>"
-                        <?if(empty($arParams["REQUIRED_FIELDS"]) ||
-                            in_array("user_portfolio_link", $arParams["REQUIRED_FIELDS"])): echo "required" ;?>
-                        <?endif?>> </label> <label
-                    id="feedback-form__file-upload-text" for="feedback-form__file-upload"
+                        id="feedback-form__file-upload" name="user_portfolio_file"
+                        accept=".pdf,.doc,.docx,.jpg,.png,.txt" value="<?=$arResult["user_portfolio_file"]?>"
+                        <?if(empty($arParams["REQUIRED_FIELDS"]) || in_array("user_portfolio_link",
+                        $arParams["REQUIRED_FIELDS"])): echo "required" ;?>
+                    <?endif?>>
+                </label> <label id="feedback-form__file-upload-text" for="feedback-form__file-upload"
                     class="feedback-form__text feedback-form__file-upload-text"><?=GetMessage("MFT_PORTFOLIO_FILE")?></label>
             </div>
         </div>
@@ -103,3 +104,26 @@ if($arResult["OK_MESSAGE"] <> '')
             class="btn-form traineeship-slider__link feedback-form__submit-btn">
     </form>
 </div>
+
+<script>
+const feedbackFormFileupload = document.getElementById(
+    "feedback-form__file-upload"
+);
+
+feedbackFormFileupload.addEventListener("change", function() {
+    let fileName = this.value.split("\\").pop(); // Получаем имя файла
+    document.getElementById("feedback-form__file-upload-text").textContent =
+        fileName ? fileName : "Прикрепить файл портфолио"; // Обновляем текст
+});
+
+const subscribeInput = document.getElementById("subscribe");
+const feedbackFormCheckbox = document.querySelector(
+    ".js-feedback-form__checkbox"
+);
+subscribeInput.addEventListener("change", () => {
+    feedbackFormCheckbox.classList.toggle(
+        "feedback-form__checkbox-agree",
+        subscribeInput.checked
+    );
+});
+</script>

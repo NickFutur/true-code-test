@@ -64,15 +64,15 @@ $curPage = $APPLICATION->GetCurPage(false); ?>
                 ),
                     false
                 );?>
-<!--                <nav class="navigation">-->
-<!--                    <ul class="navigation__list">-->
-<!--                        <li class="navigation__item"><a href="#">Вакансии</a></li>-->
-<!--                        <li class="navigation__item"><a href="#">Кто мы?</a></li>-->
-<!--                        <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>-->
-<!--                        <li class="navigation__item"><a href="#">Отзывы</a></li>-->
-<!--                        <li class="navigation__item"><a href="#">Правила</a></li>-->
-<!--                    </ul>-->
-<!--                </nav>-->
+                <!--                <nav class="navigation">-->
+                <!--                    <ul class="navigation__list">-->
+                <!--                        <li class="navigation__item"><a href="#">Вакансии</a></li>-->
+                <!--                        <li class="navigation__item"><a href="#">Кто мы?</a></li>-->
+                <!--                        <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>-->
+                <!--                        <li class="navigation__item"><a href="#">Отзывы</a></li>-->
+                <!--                        <li class="navigation__item"><a href="#">Правила</a></li>-->
+                <!--                    </ul>-->
+                <!--                </nav>-->
                 <button class="btn-form">Подать заявку</button>
             </div>
         </div>
@@ -108,19 +108,29 @@ $curPage = $APPLICATION->GetCurPage(false); ?>
                 </div>
             </div>
         </div>
-<!-- Header mobile navigation -->
+        <!-- Header mobile navigation -->
         <div class="nav-block__mobile js-nav-block__mobile">
             <div class="nav-block__menu">
-                <nav>
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#">Вакансии</a></li>
-                        <li class="navigation__item"><a href="#">Кто мы?</a></li>
-                        <li class="navigation__item"><a href="#">Что мы предлагаем?</a></li>
-                        <li class="navigation__item"><a href="#">Отзывы</a></li>
-                        <li class="navigation__item"><a href="#">Правила</a></li>
-                    </ul>
-                    <button class="btn-form">Подать заявку</button>
-                </nav>
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"true-code-menu-mobile", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "podmenu",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_THEME" => "site",
+		"ROOT_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "true-code-menu-mobile"
+	),
+	false
+);?>
             </div>
             <div class="nav-block__info">
                 <div>
@@ -148,5 +158,4 @@ $curPage = $APPLICATION->GetCurPage(false); ?>
             </div>
         </div>
 
-    </header
-<main>
+    </header <main>
