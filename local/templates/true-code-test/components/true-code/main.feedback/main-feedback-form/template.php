@@ -33,6 +33,7 @@ if($arResult["OK_MESSAGE"] <> '')
                 title="Заполните имя" value="<?=$arResult["AUTHOR_NAME"]?>" <?if(empty($arParams["REQUIRED_FIELDS"]) ||
                 in_array("NAME", $arParams["REQUIRED_FIELDS"])): echo "required" ;?>
             <?endif?> >
+            <span class="feedback-form__error-message_none">* введите ваше имя</span>
         </div>
         <div class="feedback-form__phone js-feedback-form__phone">
             <label for="feedback-phone-email"
@@ -105,42 +106,3 @@ if($arResult["OK_MESSAGE"] <> '')
             class="btn-form traineeship-slider__link feedback-form__submit-btn" id="js-feedback-form__submit">
     </form>
 </div>
-
-<script>
-const feedbackFormFileupload = document.getElementById(
-    "feedback-form__file-upload"
-);
-
-feedbackFormFileupload.addEventListener("change", function() {
-    let fileName = this.value.split("\\").pop(); // Получаем имя файла
-    document.getElementById("feedback-form__file-upload-text").textContent =
-        fileName ? fileName : "Прикрепить файл портфолио"; // Обновляем текст
-});
-
-const subscribeInput = document.getElementById("subscribe");
-const feedbackFormCheckbox = document.querySelector(
-    ".js-feedback-form__checkbox"
-);
-subscribeInput.addEventListener("change", () => {
-    feedbackFormCheckbox.classList.toggle(
-        "feedback-form__checkbox-agree",
-        subscribeInput.checked
-    );
-});
-
-const mainFeedbackFormSubmit = document.getElementById('js-feedback-form__submit');
-const feedbackPhoneEmailInput = document.getElementById('feedback-phone-email');
-const feedbackFormPhoneEmailBlock = document.querySelector('.js-feedback-form__phone');
-const errorMessage = feedbackFormPhoneEmailBlock.querySelector(".feedback-form__error-message_none");
-
-mainFeedbackFormSubmit.addEventListener('click', () =>
-    mainFeedbackFormClick(feedbackPhoneEmailInput, errorMessage)
-);
-
-
-function mainFeedbackFormClick(feedbackInput, feedbackErrorMessage) {
-    if (feedbackInput.hasAttribute('required') && feedbackInput.value.trim() === '') {
-        feedbackErrorMessage.classList.add("feedback-form__error-message_block");
-    }
-}
-</script>

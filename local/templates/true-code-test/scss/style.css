@@ -359,6 +359,21 @@
   max-height: 24px;
   position: relative;
 }
+.feedback-block .feedback-block__wrap .feedback-form .feedback-form__name .feedback-form__error-message_block,
+.feedback-block .feedback-block__wrap .feedback-form .feedback-form__phone .feedback-form__error-message_block {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  color: #f10e00;
+  font-family: "Panton SemiBold", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: block !important;
+}
+.feedback-block .feedback-block__wrap .feedback-form .feedback-form__name .feedback-form__error-message_none,
+.feedback-block .feedback-block__wrap .feedback-form .feedback-form__phone .feedback-form__error-message_none {
+  display: none;
+}
 .feedback-block .feedback-block__wrap .feedback-form .feedback-form__phone {
   margin-top: 56px;
 }
@@ -373,19 +388,6 @@
 }
 .feedback-block .feedback-block__wrap .feedback-form .feedback-form__phone input:focus::placeholder {
   opacity: 1;
-}
-.feedback-block .feedback-block__wrap .feedback-form .feedback-form__phone .feedback-form__error-message_block {
-  position: absolute;
-  bottom: -17px;
-  left: 0;
-  color: #f10e00;
-  font-family: "Panton SemiBold", sans-serif;
-  font-weight: 400;
-  font-size: 0.9rem;
-  display: block !important;
-}
-.feedback-block .feedback-block__wrap .feedback-form .feedback-form__phone .feedback-form__error-message_none {
-  display: none;
 }
 .feedback-block .feedback-block__wrap .feedback-form .feedback-form__internship {
   margin-top: 51px;
