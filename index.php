@@ -90,7 +90,7 @@ $APPLICATION->SetTitle("Липской завод");
 		"EMAIL_TO" => "morinnikita31@gmail.com",
 		"EVENT_MESSAGE_ID" => array("13"),
 		"OK_TEXT" => "Спасибо, ваша заявка принята",
-		"REQUIRED_FIELDS" => array("NAME", "user_phone_email", "user_intership"),
+		"REQUIRED_FIELDS" => array("NAME", "user_phone_email", "user_intership", "feedback_subscribe"),
 		"USE_CAPTCHA" => "N"
 	)
 );?>

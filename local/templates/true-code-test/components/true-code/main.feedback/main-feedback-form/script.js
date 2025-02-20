@@ -10,7 +10,7 @@ BX.ready(function () {
   });
 
   // обработка поля согласия обработки данных
-  const subscribeInput = document.getElementById("subscribe");
+  const subscribeInput = document.getElementById("feedback_subscribe");
   const feedbackFormCheckbox = document.querySelector(
     ".js-feedback-form__checkbox"
   );

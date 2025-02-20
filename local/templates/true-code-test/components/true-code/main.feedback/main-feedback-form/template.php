@@ -86,8 +86,13 @@ if($arResult["OK_MESSAGE"] <> '')
         </div>
 
         <div class="feedback-form__subscribe">
-            <label class="feedback-form__checkbox js-feedback-form__checkbox"> <input type="checkbox" id="subscribe"
-                    name="subscribe" class="feedback-form__input" required> </label> <label for="subscribe"
+            <label class="feedback-form__checkbox js-feedback-form__checkbox"> <input type="checkbox"
+                    id="feedback_subscribe" name="feedback_subscribe" class="feedback-form__input"
+                    <?if(empty($arParams["REQUIRED_FIELDS"]) || in_array("feedback_subscribe",
+                    $arParams["REQUIRED_FIELDS"])): echo "requared" ?>
+                <?endif?> value="Y" <?= ($_POST['feedback_subscribe'] === 'Y') ? 'checked' : '' ?>>
+            </label>
+            <label for="feedback_subscribe"
                 class="feedback-form__text feedback-form__checkbox-text"><?=GetMessage("MFT_SUBSCRIBE_TEXT")?></label>
         </div>
         <?if($arParams["USE_CAPTCHA"] == "Y"):?>

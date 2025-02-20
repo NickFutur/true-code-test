@@ -42,6 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_
                 $arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_PORTFOLIO_FILE");
             if ((empty($arParams["REQUIRED_FIELDS"]) || in_array("user_phone_email", $arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["user_phone_email"]) <= 3)
                 $arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_PHONE_EMAIL");
+            if ((empty($arParams["REQUIRED_FIELDS"]) || in_array("feedback_subscribe", $arParams["REQUIRED_FIELDS"])) && $_POST["feedback_subscribe"] !== 'Y')
+                $arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_SUBSCRIBE");
         }
         if (mb_strlen($_POST["user_email"]) > 1 && !check_email($_POST["user_email"]))
             $arResult["ERROR_MESSAGE"][] = GetMessage("MF_EMAIL_NOT_VALID");
@@ -81,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_
                 "user_portfolio_link" => $_POST["user_portfolio_link"],
                 "user_portfolio_file" => $portfolioFilePath, // Передаём путь к файлу
                 "user_phone_email" => $_POST["user_phone_email"],
+                "feedback_subscribe" => $_POST["feedback_subscribe"],
                 "TEXT" => $_POST["MESSAGE"],
             );
 
@@ -97,6 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_
             $_SESSION["MF_user_portfolio_link"] = htmlspecialcharsbx($_POST["user_portfolio_link"]);
             $_SESSION["MF_user_portfolio_file"] = $portfolioFilePath; // Сохраняем путь к файлу в сессии
             $_SESSION["MF_user_phone_email"] = htmlspecialcharsbx($_POST["user_phone_email"]);
+            $_SESSION["MF_feedback_subscribe"] = htmlspecialcharsbx($_POST["feedback_subscribe"]);
             $event = new \Bitrix\Main\Event('main', 'onFeedbackFormSubmit', $arFields);
             $event->send();
             LocalRedirect($APPLICATION->GetCurPageParam("success=" . $arResult["PARAMS_HASH"], array("success")));
@@ -109,6 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_
         $arResult["user_portfolio_link"] = htmlspecialcharsbx($_POST["user_portfolio_link"]);
         $arResult["user_portfolio_file"] = htmlspecialcharsbx($_POST["user_portfolio_file"]);
         $arResult["user_phone_email"] = htmlspecialcharsbx($_POST["user_phone_email"]);
+        $arResult["feedback_subscribe"] = htmlspecialcharsbx($_POST["feedback_subscribe"]);
     } else
         $arResult["ERROR_MESSAGE"][] = GetMessage("MF_SESS_EXP");
 } elseif ($_REQUEST["success"] == $arResult["PARAMS_HASH"]) {
@@ -132,6 +137,8 @@ if (empty($arResult["ERROR_MESSAGE"])) {
             $arResult["user_portfolio_file"] = htmlspecialcharsbx($_SESSION["MF_user_portfolio_file"]); // Возвращаем путь к файлу
         if ($_SESSION["user_phone_email"] <> '')
             $arResult["user_phone_email"] = htmlspecialcharsbx($_SESSION["MF_user_phone_email"]);
+        if ($_SESSION["feedback_subscribe"] <> '')
+            $arResult["feedback_subscribe"] = htmlspecialcharsbx($_SESSION["MF_feedback_subscribe"]);
     }
 }
 

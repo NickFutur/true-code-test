@@ -2,6 +2,7 @@
 $MESS ['MF_OK_MESSAGE'] = "Спасибо, ваша заявка принята!";
 $MESS ['MF_REQ_NAME'] = "Заполните имя";
 $MESS ['MF_REQ_EMAIL'] = "Заполните e-mail";
+$MESS ['MF_REQ_SUBSCRIBE'] = "Дайте своё согласие";
 $MESS ['MF_REQ_INTERSHIP'] = "Заполните направление стажировки";
 $MESS ['MF_REQ_PORTFOLIO_LINK'] = "Добавьте ваше портфолио";
 $MESS ['MF_REQ_PORTFOLIO_FILE'] = "Закрепите ваше портфолио";
