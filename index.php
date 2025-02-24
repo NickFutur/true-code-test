@@ -77,7 +77,7 @@ $APPLICATION->SetTitle("Липской завод");
 );?>
     <div class="modal-image banner-block_indent_lg">
         <div class="modal-image__wrap">
-            <img alt="3D object model" src="/local/templates/true-code-test/images/objects-three-d.png">
+            <img alt="3D object model" src="<?=SITE_TEMPLATE_PATH?>/images/objects-three-d.png">
         </div>
     </div>
     <div class="feedback-block banner-block_indent_lg">

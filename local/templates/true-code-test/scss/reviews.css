@@ -1,0 +1,86 @@
+:root {
+  font-size: 10px;
+}
+
+.reviews-wrap .reviews-wrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.reviews-wrap .reviews-wrapper .reviews-title {
+  font-family: "Panton", sans-serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #000;
+}
+.reviews-wrap .reviews-wrapper .reviews-block {
+  width: 100%;
+  margin-top: 60px;
+}
+.reviews-wrap .reviews-wrapper .reviews-block .reviews-block__slider {
+  max-height: 1200px;
+}
+.reviews-wrap .reviews-wrapper .reviews-block .reviews-block__slider .reviews-slider__wrapper .reviews-slider__slide {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+}
+.reviews-wrap .reviews-wrapper .reviews-block .reviews-block__slider .reviews-slider__wrapper .reviews-slider__slide .reviews-slider__image {
+  border: 2px solid #352958;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.reviews-wrap .reviews-wrapper .reviews-block .reviews-block__slider .reviews-slider__wrapper .reviews-slider__slide .reviews-slider__desc {
+  flex: 1;
+  max-width: 416px;
+  border: 2px solid #352958;
+  border-radius: 49px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px 35px;
+}
+.reviews-wrap .reviews-wrapper .reviews-block .reviews-block__slider .reviews-slider__wrapper .reviews-slider__slide .reviews-slider__desc .reviews-slider__text {
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+}
+.reviews-wrap .reviews-wrapper .reviews-block .reviews-block__slider .reviews-slider__wrapper .reviews-slider__slide .reviews-slider__desc .reviews-slider__text p {
+  font-family: "Panton Light", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 162%;
+  color: #352958;
+}
+.reviews-wrap .reviews-wrapper .reviews-block .reviews-block__slider .reviews-slider__wrapper .reviews-slider__slide .reviews-slider__desc .reviews-slider__caption p {
+  font-family: "Panton", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: right;
+  color: #352958;
+}
+.reviews-wrap .reviews-wrapper .swiper-slide:nth-child(even) {
+  width: 100%;
+}
+.reviews-wrap .reviews-wrapper .swiper-slide:nth-child(odd) {
+  width: 100%;
+}
+.reviews-wrap .reviews-wrapper .reviews-slider__slide_even {
+  position: absolute;
+  left: 0;
+}
+.reviews-wrap .reviews-wrapper .reviews-slider__slide_odd {
+  position: absolute;
+  right: 0;
+  flex-direction: row-reverse;
+}/*# sourceMappingURL=reviews.css.map */
