@@ -47,26 +47,29 @@ const reviewsSlider = new Swiper("#js-reviews-slider", {
   slidesPerView: 2,
   spaceBetween: 30,
   slidesPerGroup: 2,
-
-  //   // Navigation arrows
-  //   // navigation: {
-  //   //   nextEl: ".reviews-slider__btn-next",
-  //   //   prevEl: ".reviews-slider__btn-prev",
-  //   // },
-  //   breakpoints: {
-  //     0: {
-  //       slidesPerView: 2,
-  //       slidesPerView: 2,
-  //       slidesPerGroup: 2,
-  //       spaceBetween: 35,
-  //     },
-  //     1250: {
-  //       slidesPerView: 2,
-  //       slidesPerView: 2,
-  //       slidesPerGroup: 2,
-  //       spaceBetween: 30,
-  //     },
-  //   },
+  navigation: {
+    nextEl: ".reviews-slider__pagination .reviews-slider__pagination-next",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+    },
+    290: {
+      slidesPerView: 2,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 35,
+    },
+    651: {
+      slidesPerView: 2,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+    },
+  },
 });
 
 const menuBurgerBtn = document.querySelectorAll(".js-burger-menu");

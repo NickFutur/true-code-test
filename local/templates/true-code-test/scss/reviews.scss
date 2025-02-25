@@ -1,6 +1,14 @@
 @import "variants";
 
 .reviews-wrap {
+  position: relative;
+  .reviews-wrap__background-image {
+    position: absolute;
+    left: -188px;
+    bottom: 128px;
+    width: 517px;
+    height: 489px;
+  }
   .reviews-wrapper {
     margin-top: 40px;
     display: flex;

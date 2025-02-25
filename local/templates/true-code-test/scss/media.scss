@@ -126,6 +126,15 @@
   }
 }
 
+@media (min-width: 651px) {
+  .reviews-slider_caption_mob {
+    display: none;
+  }
+  .reviews-slider_caption_desk {
+    display: block;
+  }
+}
+
 @media (max-width: 650px) {
   // feedback block
   .feedback-block {
@@ -251,6 +260,76 @@
         color: $dark-purple;
       }
     }
+  }
+
+  //reviews slider
+  .reviews-wrap {
+    .reviews-wrap__background-image {
+      display: none;
+    }
+    .reviews-wrapper {
+      margin-top: 35px;
+      .reviews-title {
+        font-size: 2.4rem;
+      }
+      .reviews-block {
+        margin-top: 60px;
+        .reviews-block__slider {
+          background-image: none;
+          .reviews-slider__wrapper {
+            .reviews-slider__slide {
+              flex-direction: column;
+              .reviews-slider__image {
+                display: flex;
+                gap: 15px;
+                width: 100%;
+                align-items: center;
+                .reviews-slider__caption {
+                  flex: 1;
+                  p {
+                    font-family: $panton-reg;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    color: $dark-purple;
+                  }
+                }
+                img {
+                  width: 54px;
+                  height: 54px;
+                }
+              }
+              .reviews-slider__desc {
+                padding: 25px;
+                .reviews-slider__text {
+                  gap: 25px;
+                  p {
+                    font-size: 1.4rem;
+                    line-height: 120%;
+                  }
+                }
+                .reviews-slider__caption {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews-slider__slide_odd {
+      .reviews-slider__image {
+        flex-direction: row-reverse;
+        .reviews-slider__caption {
+          text-align: right;
+        }
+      }
+    }
+  }
+  .reviews-slider_caption_mob {
+    display: block;
+    flex: 1;
+  }
+  .reviews-slider_caption_desk {
+    display: none;
   }
 }
 
