@@ -4,8 +4,9 @@
 # Исключить папки local и vakansii
 !/local/
 !/vakansii/
-!/upload/
 !/reviews/
+!/upload/
+
 
 # Исключить файлы index.php и .left.menu.php
 !/index.php
@@ -15,4 +16,5 @@
 /*/*
 !/local/**
 !/vakansii/**
+!/reviews/**
 !/upload/feedback_portfolio/**
