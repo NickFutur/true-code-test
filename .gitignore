@@ -5,6 +5,7 @@
 !/local/
 !/vakansii/
 !/upload/
+!/reviews/
 
 # Исключить файлы index.php и .left.menu.php
 !/index.php
